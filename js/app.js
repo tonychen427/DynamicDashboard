@@ -32,7 +32,7 @@ $(document).ready(function() {
                 sliders.push(new Slider(this));
             });
         }
-    }
+    };
 
     ko.bindingHandlers.customWidgets = {
         init: function(element, valueAccessor, allBindings, viewModel, bindingContext) { 
@@ -54,13 +54,13 @@ $(document).ready(function() {
         self.widgetName = ko.observable(mData.widgetName);
         self.widgetType = ko.observable(mData.widgetType);
         self.widgetData = ko.observable(mData.widgetData);     
-    }
+    };
 
     var viewModelColumn = function(mData,mColumnSize){        
         var self = this;
         var data = [];                                
         $.each(mData.widgetList, function(i,v){ data.push(new viewModelWidget(v)); });
-        self,id = mData.id;
+        self.id = mData.id;
         self.title = ko.observable(mData.title);
         self.css = ko.observable(xColumnsClass[mColumnSize]);                
         self.widgetList = ko.observableArray(data);
@@ -69,13 +69,13 @@ $(document).ready(function() {
             console.log(data);
             console.log(event);
 
-        }
+        };
         self.remove_widget = function(data, event){
             console.log("Remove Widget");                    
             console.log(self.widgetList());
             self.widgetList.remove(data);
-        }
-    }
+        };
+    };
 
     var viewModelPanel = function(mData){        
         var self = this;
@@ -93,7 +93,7 @@ $(document).ready(function() {
         self.columnsList = ko.observableArray(data);
         self.panelActions = function(data,event){            
             $("." + $(event.target).data("type") + data.panelId()).slideToggle( "slow", function() { });
-        }
+        };
         
         self.updateLayout = function(data,event){
             $('.layoutBox').css('border','1px solid #c0c0c0');
@@ -113,19 +113,19 @@ $(document).ready(function() {
                     }
                 }
             }else{
-                for (var i = currentNumColumn - 1 ; i >= 0  ; i--) {                    
-                    if (i < requestNumColumn){
-                        self.columnsList()[i].css(xColumnsClass[requestNumColumn]);   
+                for (var ii = currentNumColumn - 1 ; ii >= 0  ; ii--) {                    
+                    if (ii < requestNumColumn){
+                        self.columnsList()[ii].css(xColumnsClass[requestNumColumn]);   
                     } else{
-                        for( var w = 0; w < self.columnsList()[i].widgetList().length ; w++){                            
-                            self.columnsList()[requestNumColumn-1].widgetList.push(self.columnsList()[i].widgetList()[w]);    
+                        for( var w = 0; w < self.columnsList()[ii].widgetList().length ; w++){                            
+                            self.columnsList()[requestNumColumn-1].widgetList.push(self.columnsList()[ii].widgetList()[w]);    
                         }                        
-                        self.columnsList.splice(i, 1);
+                        self.columnsList.splice(ii, 1);
                     }                      
                 }                
             }
-        }        
-    }
+        };        
+    };
 
     var viewModelDashboard = function(mData){
         var self = this;                
@@ -199,7 +199,7 @@ $(document).ready(function() {
                 arg.cancelDrop = true;
             }
         };
-    }
+    };
 
     var dashboard = new viewModelDashboard(dashboardData);  
     //ko.bindingHandlers.sortable.beforeMove = dashboard.verifyAssignments;    

@@ -62,7 +62,7 @@ module.exports = function(grunt) {
 
   // Creates the `server` task
   grunt.registerTask('server',[
-    //'jshint:myFiles', 
+    'jshint:myFiles', 
     // Starts the livereload server to which the browser will connect to
     // get notified of when it needs to reload
     'livereload-start',
@@ -70,7 +70,7 @@ module.exports = function(grunt) {
     // Connect is no longer blocking other tasks, so it makes more sense to open the browser after the server starts
     'open',
     // Starts monitoring the folders and keep Grunt alive
-    'regarde',
+    'regarde'
    
   ]);
 };
