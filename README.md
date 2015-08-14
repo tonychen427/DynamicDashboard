@@ -1,26 +1,20 @@
-Bower install [package name] --save
-
-
-
 Install Nodejs
 
      https://nodejs.org/
 
 UI Installation
-Bower is a command line utility. Install it with npm.
-if you dont have bower than run the following command
 
     npm install -g bower
 
-install all the componetns
+Install all the bower components
     
-    Bower install
+    bower install
 
-install Grunt
+Install Grunt
 
     npm install -g grunt-cli
 
-install npm package
+Install npm package
 
     npm install
 
