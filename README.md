@@ -18,7 +18,7 @@ Install npm package
 
     sudo npm install
 
-run application
+Run application
 
     grunt server
 
