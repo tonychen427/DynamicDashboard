@@ -1,8 +1,8 @@
 Install Nodejs
 
-     https://nodejs.org/
+    https://nodejs.org/
 
-UI Installation
+Install bower (http://bower.io/)
 
     npm install -g bower
 
@@ -10,7 +10,7 @@ Install all the bower components
     
     bower install
 
-Install Grunt
+Install Grunt (http://gruntjs.com/)
 
     npm install -g grunt-cli
 
