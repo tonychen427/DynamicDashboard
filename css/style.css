@@ -1,0 +1,299 @@
+/*
+Stylesheet for examples by DevHeart.
+http://devheart.org/
+
+Article title:	jQuery: Customizable layout using drag n drop
+Article URI:	http://devheart.org/articles/jquery-customizable-layout-using-drag-and-drop/
+
+Example title:	1. Getting started with sortable lists
+Example URI:	http://devheart.org/examples/jquery-customizable-layout-using-drag-and-drop/1-getting-started-with-sortable-lists/index.html
+*/
+
+/*
+Alignment
+------------------------------------------------------------------- */
+
+/* Floats */
+
+.left {float: left;}
+.right {float: right;}
+
+.clear,.clearer {clear: both;}
+.clearer {
+	display: block;
+	font-size: 0;
+	height: 0;
+	line-height: 0;
+}
+
+
+/*
+Example specifics
+------------------------------------------------------------------- */
+
+/* Layout */
+
+#center-wrapper {
+	/*margin: 0 auto;*/
+	/*width: 920px;*/
+	margin: 20px;
+}
+
+
+/* Columns */
+
+.column {
+	/*	margin-left: 2%; */
+	/*	width: 33.3%;    */
+	width: 50%;
+}
+.column.first {
+	/*	margin-left: 0;*/
+}
+
+
+/* Sortable items */
+
+.sortable-list {
+	/*background-color: #F93;*/
+	list-style: none;
+	margin: 0;
+	min-height: 60px;
+	
+}
+.sortable-item {
+/*	background-color: #FFF;
+border: 1px solid #000;
+cursor: move;
+display: block;
+font-weight: bold;
+margin-bottom: 5px;
+padding: 20px 0;
+text-align: center;*/
+background-color: #FFF;
+border: 1px solid #c0c0c0;
+cursor: move;
+display: block;
+margin-bottom: 5px;
+border-radius: 3px;
+}
+
+/* Containment area */
+
+#containment {
+	background-color: #FFA;
+	height: 230px;
+}
+
+
+/* Item placeholder (visual helper) */
+
+.placeholder {
+	background-color: #BFB;
+	border: 1px dashed #666;
+	height: 58px;
+	margin-bottom: 5px;
+}
+
+
+.sortable-item .header {
+	margin: 10px;
+	padding-bottom: 8px;
+	border-bottom: 1px solid #c0c0c0;
+	padding-left: 8px;
+}
+
+.sortable-item .header .widgetName {
+	color: #005c9c
+}
+
+/*--------------------------- */
+
+.panelToolBar  {
+	padding-bottom: 5px;
+    padding-top: 5px;
+}
+.panelToolBar {
+	text-align: right;
+}
+.nav-tabs > li > a {
+	border-radius: inherit !important;
+}
+a {
+	outline: 0 !important;
+}
+
+.container {
+	margin-top: 10px;
+}
+
+.nav-tabs > li {
+	position: relative;
+}
+.nav > li.active > a {
+	border-top: 3px solid #337ab7 !important;
+}
+.nav-tabs > li > a {
+	display: inline-block;
+}
+
+.nav-tabs > li > span {
+	display: none;
+	cursor: pointer;
+	position: absolute;
+	right: 8px;
+	top: 0px;
+	color: #c0c0c0;
+}
+
+.nav-tabs > li:hover > span {
+	display: inline-block;
+}   
+.Cursor {
+	cursor: pointer;
+}        
+
+.xColumns {
+	display: inline-block;
+	vertical-align: top;
+}
+.widgetBox {
+	border: 1px solid #c0c0c0;	
+	margin-bottom: 5px;
+	padding: 5px;
+	background: #FFF;
+}
+.widgetBox .header {
+	border-bottom: 1px solid #c0c0c0;                
+}
+.widgetBox .body {
+	height: 300px;
+}
+
+
+.btn-outline {
+    background-color: transparent;
+    color: inherit;
+    transition: all .5s;
+}
+
+.btn-primary.btn-outline {
+    color: #428bca;
+}
+
+.btn-success.btn-outline {
+    color: #5cb85c;
+}
+
+.btn-info.btn-outline {
+    color: #5bc0de;
+}
+
+.btn-warning.btn-outline {
+    color: #f0ad4e;
+}
+
+.btn-danger.btn-outline {
+    color: #d9534f;
+}
+
+.btn-primary.btn-outline:hover,
+.btn-success.btn-outline:hover,
+.btn-info.btn-outline:hover,
+.btn-warning.btn-outline:hover,
+.btn-danger.btn-outline:hover {
+    color: #fff;
+}
+
+.xPanel {
+	border:1px solid #c0c0c0;
+	width: 100%;
+	height: 260px;
+	margin-top: 5px;
+	display: none;
+	text-align: left;
+	padding: 10px;	
+}
+
+.xPanel.rp {
+	border-left: 5px solid green;
+}
+
+.xPanel.lp {
+	border-left: 5px solid orange;
+}
+.xPanel.tp {
+	border-left: 5px solid #980000;
+}
+
+.xPanel.rp .header, .xPanel.lp .header, .xPanel.tp .header {
+	font-size: 20px;
+	margin-left: 16px;
+}
+.xPanel.tp .header, .xtool {
+	color:  #980000;	
+}
+
+.xPanel.lp .header, .xlayout {
+	color: orange;
+}
+
+.xPanel.rp .header, .xreport {
+	color:  green;	 	
+}
+
+.availableReportsPanel > div, .layoutOption > div {
+	display: inline-block;
+}
+.layoutOption {
+	margin-left: 15px;
+}
+.layoutBox {
+	border: 1px solid #c0c0c0;
+    height: 197px;
+    margin: 2px;
+    padding: 8px;
+    width: 263px;	
+    text-align: center;	
+}
+.availableReports {
+	border: 1px solid #c0c0c0;
+    height: 37px;
+    margin: 2px;
+    padding: 8px;
+    width: 260px;	
+}
+.rotate90 {
+	font-size: 18px !important;
+	-webkit-transform: rotate(90deg) !important;
+    -moz-transform: rotate(90deg) !important;
+    -o-transform: rotate(90deg) !important;
+    -ms-transform: rotate(90deg) !important;
+    transform: rotate(90deg) !important;
+}
+
+.spaceFix {
+	padding: 5px !important;
+}
+
+.v-wrap{
+      background: #eee none repeat scroll 0 0;
+    border: 1px solid #c0c0c0;
+    height: 156px;
+    text-align: center;
+    white-space: nowrap;
+}
+.v-wrap:before{
+   background: #eee none repeat scroll 0 0;
+    content: "";
+    display: inline-block;
+    height: 100%;
+    margin-right: -5px;
+    vertical-align: middle;
+}
+.v-box{
+    display: inline-block;
+    padding: 0 1em;
+    vertical-align: middle;
+    white-space: normal;
+}

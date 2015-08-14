@@ -1,0 +1,27 @@
+{
+  "name": "DyamicDashboard",
+  "version": "0.0.0",
+  "moduleType": [
+    "globals"
+  ],
+  "authors": [
+    "Tony Chen"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.4",
+    "bootstrap": "~3.3.4",
+    "knockoutjs": "~3.3.0",
+    "jquery-ui": "~1.11.4",
+    "components-font-awesome": "~4.3.0",
+    "highcharts-release": "~4.1.5",
+    "bootstrap-vertical-tabs": "~1.2.1"
+  }
+}
